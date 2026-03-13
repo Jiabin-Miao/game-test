@@ -274,9 +274,9 @@
 ---
 
 ### 4.5 角色关系网
-- **核心羁绊**：`{{CORE_RELATIONSHIP}}`（如"师徒/仇敌/盟友"）
+- **核心羁绊**：`{{CORE_RELATIONSHIP}}`
 - **关键剧情触发点**：`{{KEY_PLOT_TRIGGER}}`
-- **角色专属台词**：`{{CHARACTER_DIALOGUE}}`（示例：`"墨剑未寒，血债血偿"`）
+- **角色专属台词**：`{{CHARACTER_DIALOGUE}}`
 
 ## 五、视觉设计（Visual Design）
 
@@ -427,3 +427,576 @@
 - **简化版**: `{{SIMPLIFIED_LOGO}}`
 - **图标版**: `{{ICON_LOGO}}`
 - **衍生标识**: `{{DERIVATIVE_LOGOS}}`
+
+## 六、游戏玩法（Gameplay）
+
+---
+
+### 6.1 核心循环
+
+```
+{{Core Action}} → {{Feedback Type}} → {{Progress/Consumption Content}} → {{Triggered Next Action}}
+```
+
+---
+
+### 6.2 操作方式
+
+| 操作层级 | 触发方式 | 效果 |
+|----------|----------|------|
+| 基础操作 | `{{Trigger Method}}` | `{{Effect Description}}` |
+| 进阶操作 | `{{Trigger Method}}` | `{{Effect Description}}` |
+
+> 平台：[PC / 移动端 / 主机 / 多平台]
+
+---
+
+### 6.3 主玩法机制
+
+> 根据游戏类型选择对应子模块，删除其余模块
+
+####  `{{Gameplay Type Name}}`（适用游戏类型：`{{Game Genre}}`）
+
+```
+核心规则1：{{Rule Name}} - {{Rule Description}}
+核心规则2：{{Rule Name}} - {{Rule Description}}
+核心规则3：{{Rule Name}} - {{Rule Description}}
+```
+
+**预置玩法类型参考：**
+
+| 玩法类型 | 适用游戏 | 核心规则维度 |
+|----------|----------|--------------|
+| 实时操作 | 动作/射击/竞速 | 移动方式 / 战斗方式 / 核心技巧 |
+| 回合决策 | 卡牌/策略/棋盘 | 回合结构 / 资源规则 / 克制关系 |
+| 解谜逻辑 | 解谜/冒险 | 谜题类型 / 提示机制 / 失败规则 |
+| 经营建造 | 模拟经营/建设 | 资源种类 / 建造规则 / 时间机制 |
+| 节奏判定 | 音游 | 判定等级 / 连击规则 / 评分标准 |
+| `{{Custom Type}}` | `{{Game Genre}}` | `{{Dimension 1}}` / `{{Dimension 2}}` / `{{Dimension 3}}` |
+
+**新手引导：**
+```
+教学方式：[强引导 / 弱引导 / 自然引导]
+引导时长：约 {{X}} 分钟
+跳过机制：[允许 / 不允许]，触发条件：{{Condition}}
+```
+
+---
+
+### 6.4 关卡结构
+
+| 关卡类型 | 核心目的 | 难度 | 奖励 |
+|----------|----------|------|------|
+| `{{Level Type 1}}` | `{{Objective}}` | `{{Difficulty Level}}` | `{{Reward}}` |
+| `{{Level Type 2}}` | `{{Objective}}` | `{{Difficulty Level}}` | `{{Reward}}` |
+| `{{Level Type N}}` | `{{Objective}}` | `{{Difficulty Level}}` | `{{Reward}}` |
+
+**难度与节奏：**
+```
+难度梯度：{{Entry-Level Design}} / {{Standard Design}} / {{Challenge Design}}
+动态调整：[有 / 无]，调整规则：{{Rule Description}}
+节奏安排：高强度内容占比 {{X%}}，低强度内容占比 {{Y%}}
+容错设计：失败惩罚 {{Penalty Description}}，重试方式 {{Retry Method}}
+```
+
+**Boss战（如有）：**
+```
+阶段数量：{{N}} 阶段
+阶段{{N}}触发条件：{{Condition}}，新增机制：{{Mechanic Description}}
+核心机制：{{Weakness/Counterplay/Environment Interaction Rules}}
+```
+
+---
+
+### 6.5 成长系统
+
+```
+成长维度：{{Dimension 1}} / {{Dimension 2}} / {{Dimension 3}}
+资源来源：{{Source 1}} / {{Source 2}} / {{Source 3}}
+成长上限：{{Current Version Cap Description}}
+```
+
+---
+
+### 6.6 社交与多人玩法
+
+```
+人数规模：[单人 / 2人 / {{N}}人 / MMO]
+合作模式：{{Collaboration Rules & Goals}}
+竞争模式：{{PVP Rules & Matchmaking System}}
+排名体系：[无 / 实时榜单 / 赛季结算]，奖励：{{Reward Content}}
+```
+
+---
+
+### 6.7 奖励与激励
+
+| 激励层级 | 触发条件 | 奖励内容 |
+|----------|----------|----------|
+| 即时奖励 | `{{Single Action Completion}}` | `{{Reward Content}}` |
+| 阶段奖励 | `{{Level/Quest Completion}}` | `{{Reward Content}}` |
+| 长期奖励 | `{{Season/Cumulative Progress}}` | `{{Reward Content}}` |
+
+# 七、关卡设计（Level Design）
+
+### 7.1 关卡结构
+
+#### 章节划分
+
+| 章节 | 关卡范围 | 核心主题 | 阶段Boss |
+|------|----------|----------|----------|
+| 第1章：`{{Chapter Name}}` | 关卡 1 - `{{N}}` | `{{Core Theme}}` | `{{Boss Name}}` |
+| 第2章：`{{Chapter Name}}` | 关卡 `{{N+1}}` - `{{M}}` | `{{Core Mechanic Introduction}}` | `{{Boss Name}}` |
+| 第N章：`{{Chapter Name}}` | 关卡 `{{...}}` | `{{Progressive Complexity}}` | `{{Final Boss}}` |
+
+#### 关卡类型
+
+| 关卡类型 | 核心目的 | 解锁条件 |
+|----------|----------|----------|
+| Main Quest | `{{Story Progression}}` | 默认开放 |
+| Challenge Mode | `{{Skill Mastery}}` | `{{Unlock Condition}}` |
+| Resource Node | `{{Resource Farming}}` | `{{Unlock Condition}}` |
+| Secret Stage | `{{Exploration Reward}}` | `{{Hidden Trigger}}` |
+
+---
+
+### 7.2 难度曲线
+
+```
+Phase 1（{{Level Range}}）：{{Tutorial Focus / Low Intensity}}
+Phase 2（{{Level Range}}）：{{Mechanic Introduction / Gradual Scaling}}
+Phase 3（{{Level Range}}）：{{Multi-Mechanic Integration / High Intensity}}
+```
+
+**难度模式：**
+
+| 模式 | 差异设定 | 额外奖励 |
+|------|----------|----------|
+| `{{Easy}}` | `{{Health Boost / Damage Reduction}}` | 教学提示 |
+| `{{Normal}}` | 基础数值 | 标准掉落 |
+| `{{Hard}}` | `{{Enemy Stats ×1.5 / Time Limit}}` | `{{Exclusive Loot}}` |
+| `{{Nightmare}}` | `{{One-Hit Kill / Procedural Layout}}` | `{{Cosmetic Reward}}` |
+
+---
+
+### 7.3 关卡奖励
+
+| 奖励类型 | 触发条件 | 奖励内容 |
+|----------|----------|----------|
+| Completion Reward | `{{Stage Clear}}` | `{{Basic Resources}}` |
+| Achievement Reward | `{{S-Rank / Speedrun}}` | `{{Character Skin}}` |
+| First-Time Bonus | `{{Initial Clear}}` | `{{Currency Pack}}` |
+| Repeat Farming | `{{Daily Reset}}` | `{{Material Drop}}` |
+
+---
+
+### 7.4 动态生成系统
+
+```
+地图生成：[固定布局 / 程序生成]，种子规则：`{{Seed Logic}}`
+敌人配置：`{{Enemy Density}}` × 关卡进度，精英怪出现率：`{{X}}%`
+道具分布：[固定点位 / 随机刷新]，稀有物品保底机制：`{{Y}}%`
+```
+
+---
+
+### 7.5 环境叙事
+
+| 叙事层级 | 表现形式 | 示例内容 |
+|----------|----------|----------|
+| 显性叙事 | 对话/过场动画 | `{{NPC独白}}` |
+| 隐性叙事 | 场景设计/碎片线索 | `{{环境细节}}` |
+| 动态叙事 | 玩法反馈/机制变化 | `{{Boss机制变异}}` |
+
+---
+
+### 7.6 失败与重试
+
+```
+失败判定：[生命归零 / 时间耗尽 / 目标丢失]
+惩罚机制：`{{资源扣除}}`（可选：[保留进度 / 完全重置]）
+重试限制：[无限制 / 次数冷却]，冷却时间：`{{X}}分钟`
+```
+
+---
+
+### 7.7 特殊机制
+
+```
+天气系统：[晴天 / 雨天 / 雾天]，影响：`{{Movement Speed / Visibility}}`
+昼夜循环：每`{{X}}`分钟切换，触发`{{敌人强化/资源刷新}}`
+随机事件：概率`{{Y}}%`触发，事件类型：`{{陷阱 / 商人 / 彩蛋}}`
+```
+
+---
+
+### 7.8 数据埋点
+
+```
+核心指标：通关率`{{目标值}}%` / 失败原因统计 / 时间分布
+埋点位置：`{{关键决策点}}`、`{{Boss战}}`、`{{资源节点}}`
+分析维度：[新手流失 / 硬核玩家行为 / 付费路径]
+```
+
+# 八、音效与音乐（Audio Design）
+
+
+---
+
+### 8.1 背景音乐（BGM）
+
+| 场景类型 | 音乐风格 | 情绪目标 |
+|----------|----------|----------|
+| 主菜单 | `{{Menu Theme}}` | `{{Calm / Epic / Mysterious}}` |
+| 主线场景 | `{{Ambient / Orchestral}}` | `{{Narrative Atmosphere}}` |
+| 战斗场景 | `{{Fast-Paced / Rhythmic}}` | `{{Tension / Excitement}}` |
+| Boss战 | `{{Epic / Dissonant}}` | `{{Urgency / Climax}}` |
+| `{{Other Scenes}}` | `{{Genre-Specific Style}}` | `{{Mood Description}}` |
+
+**自适应音乐（如有）：**
+```
+触发条件：{{Low Health / Combat Start / Story Node}}
+切换方式：[Hard Cut / Crossfade / Vertical Rebalancing / Horizontal Segmentation]
+```
+
+---
+
+### 8.2 音效设计（SFX）
+
+#### 核心交互音效
+
+| 音效类型 | 触发时机 | 听觉目标 |
+|----------|----------|----------|
+| 基础操作音效 | `{{Basic Action}}` | `{{Tactile Feedback}}` |
+| 技能/特殊操作音效 | `{{Skill Activation}}` | `{{Powerful / Magical Feel}}` |
+| 受击/失败音效 | `{{Damage Taken / Failure}}` | `{{Negative Feedback}}` |
+| 成功/奖励音效 | `{{Victory / Reward}}` | `{{Positive Reinforcement}}` |
+
+#### 环境音效
+
+```
+场景氛围音：{{Ambient Layers for Each Key Location}}
+动态音效：{{Environmental Sound Variation Based on Player State}}
+```
+
+#### UI音效
+
+```
+按钮/确认：{{Click / Confirm SFX Style}}
+界面切换：{{Menu Transition SFX Style}}
+奖励获得：{{Reward Notification SFX Style}}
+错误/警告：{{Error / Warning SFX Style}}
+```
+
+---
+
+### 8.3 音频规范
+
+```
+主音乐响度：{{-14 LUFS}} 
+音效响度：{{-16 LUFS}}
+格式要求：[MP3 / OGG / WAV]，采样率：{{44100 / 48000 Hz}}
+动态混音：[有 / 无]，规则：{{Dialogue Ducking / Music Fading During Action}}
+```
+
+# 九、技术实现（Technical Implementation）
+
+
+### 9.1 引擎与平台
+
+```
+游戏引擎：[Unity / Unreal / Cocos / Godot / 自研 / {{Custom Engine}}]
+目标平台：[iOS / Android / PC / 主机 / Multi-platform]
+最低设备要求：{{CPU / RAM / OS Version}}
+目标帧率：{{Target Frame Rate}} FPS
+```
+
+---
+
+### 9.2 核心技术模块
+
+| 技术模块 | 实现方案 | 备注 |
+|----------|----------|------|
+| 渲染风格 | `{{Shader/Rendering Pipeline Solution}}` | `{{Visual Style Requirements}}`|
+| 物理系统 | `{{Built-in/Custom Physics Solution}}` | `{{Collision/Gravity Rules}}` |
+| AI系统 | `{{Behavior Tree/State Machine/Pathfinding Solution}}` | `{{AI Complexity Description}}` |
+| 网络架构 | `{{Singleplayer/P2P/Server Solution}}` | `{{Sync Strategy/Latency Handling}}` |
+| 数据存储 | `{{Local/Cloud Storage Solution}}` | `{{Save System/Progress Sync}}` |
+| 输入系统 | `{{Input Mapping/Controller Support}}` | `{{Platform-Specific Handling}}` |
+
+---
+
+### 9.3 性能优化
+
+```
+渲染优化：{{Batching/Occlusion Culling/LOD Strategy}}
+内存优化：{{Object Pooling/Async Loading/Compression Strategy}}
+网络优化：{{Delta Sync/Reconnection Handling (if applicable)}}
+目标机型适配：{{High/Mid/Low Tier Device Support}}
+```
+
+---
+
+### 9.4 第三方服务
+
+| 服务类型 | 选用方案 | 用途 |
+|----------|----------|------|
+| 数据分析 | `{{Analytics SDK Name}}` | `{{Tracking Purpose}}` |
+| 广告平台 | `{{Ad Network SDK}}` | `{{Monetization Strategy}}` |
+| 支付系统 | `{{Payment Gateway}}` | `{{In-App Purchase Handling}}` |
+| 社交登录 | `{{Social Login SDK}}` | `{{Account Sync/Authentication}}` |
+| 云存档 | `{{Cloud Save Provider}}` | `{{Cross-Device Progress}}` |
+
+---
+
+### 9.5 工具链支持
+
+```
+开发工具：[Visual Studio / Rider / {{IDE}}] + [Blender / Photoshop / {{DCC Tool}}]
+版本控制：[Git / Perforce]，分支策略：{{Main/Dev/Feature Branching}}
+自动化流程：[CI/CD Pipeline / Build Automation / Asset Pipeline]
+调试工具：[Debug Console / Profiler / Logging System]
+```
+
+## 十、AI 生成指引（AI Generation Guide）
+
+### 10.1 资源生成优先级
+
+#### 10.1.1 核心资源（优先级：高）
+1. **主角资源**
+    - 角色精灵图（Sprite Sheet）：霜刃的站立、移动、攻击、受击、死亡动画帧
+    - 武器资源：残破古剑的图标和特效
+    - 技能特效：剑气斩、轻功踏浪、广陵散的粒子特效
+
+2. **场景资源**
+    - 第1章场景：寒江水域的背景图、前景图、中景图
+    - 地图元素：水面、小舟、芦苇、浮木等可交互元素
+    - 环境特效：水墨晕染、波浪、雾气
+
+3. **UI资源**
+    - 主界面：角色信息栏、功能按钮、背景
+    - 战斗界面：虚拟摇杆、技能按钮、血条、内力条
+    - 图标：背包、技能、商店、设置等功能图标
+
+#### 10.1.2 扩展资源（优先级：中）
+1. **怪物资源**
+    - 普通怪物：3-5种基础敌人的精灵图和动画
+    - 精英怪物：2-3种精英敌人的精灵图和动画
+    - Boss资源：第1章Boss（云中鹤）的完整资源
+
+2. **音效资源**
+    - 背景音乐：主菜单BGM、战斗BGM、寒江水域BGM
+    - 音效：攻击音效、受击音效、技能音效、UI音效
+
+3. **关卡资源**
+    - 关卡地图：前10关的地图布局
+    - 机关元素：琴音机关、墨迹引导、水流推动等
+
+#### 10.1.3 补充资源（优先级：低）
+1. **NPC资源**
+    - 琴音师、铁匠老张、药师婆婆的立绘和对话框
+2. **时装资源**
+    - 墨客书生装、血煞杀手装的精灵图
+3. **特殊效果**
+    - 剧情回忆的墨迹特效、画卷残损特效
+
+### 10.2 代码生成指引
+
+#### 10.2.1 核心系统代码
+1. **角色控制系统**
+   ```
+   - PlayerController.ts：玩家输入处理、移动控制
+   - PlayerAnimation.ts：角色动画状态机
+   - PlayerCombat.ts：战斗系统、技能释放
+   - PlayerStats.ts：角色属性管理
+   ```
+
+2. **战斗系统**
+   ```
+   - CombatManager.ts：战斗管理器
+   - DamageCalculator.ts：伤害计算（实现第三章的伤害公式）
+   - SkillSystem.ts：技能系统
+   - BuffSystem.ts：Buff/Debuff系统
+   ```
+
+3. **关卡系统**
+   ```
+   - LevelManager.ts：关卡管理器
+   - LevelLoader.ts：关卡加载器
+   - CheckpointSystem.ts：检查点系统
+   - RewardSystem.ts：奖励系统（实现第三章的掉落公式）
+   ```
+
+4. **AI系统**
+   ```
+   - EnemyAI.ts：敌人AI基类
+   - NormalEnemyAI.ts：普通怪AI（巡逻、追击、攻击）
+   - EliteEnemyAI.ts：精英怪AI（技能释放、召唤）
+   - BossAI.ts：Boss AI（多阶段、机制战斗）
+   ```
+
+#### 10.2.2 UI系统代码
+1. **主界面**
+   ```
+   - MainUI.ts：主界面管理器
+   - CharacterPanel.ts：角色信息面板
+   - MenuPanel.ts：菜单面板
+   ```
+
+2. **战斗界面**
+   ```
+   - BattleUI.ts：战斗界面管理器
+   - VirtualJoystick.ts：虚拟摇杆
+   - SkillButton.ts：技能按钮
+   - HPBar.ts：血条组件
+   ```
+
+3. **背包系统**
+   ```
+   - InventoryUI.ts：背包界面
+   - ItemSlot.ts：物品槽组件
+   - ItemTooltip.ts：物品提示框
+   ```
+
+#### 10.2.3 数据系统代码
+1. **数据管理**
+   ```
+   - DataManager.ts：数据管理器
+   - SaveSystem.ts：存档系统
+   - ConfigLoader.ts：配置加载器
+   ```
+
+2. **配置文件**
+   ```
+   - PlayerConfig.json：角色配置（实现第三章的成长公式）
+   - EnemyConfig.json：怪物配置（实现第三章的怪物公式）
+   - SkillConfig.json：技能配置（实现第三章的技能倍率）
+   - LevelConfig.json：关卡配置
+   - ItemConfig.json：物品配置（实现第三章的物品定价）
+   ```
+
+### 10.3 沙箱环境构建指引
+
+#### 10.3.1 项目结构
+```
+project/
+├── assets/                 # 资源目录
+│   ├── sprites/           # 精灵图
+│   │   ├── player/       # 主角资源
+│   │   ├── enemies/      # 敌人资源
+│   │   └── ui/           # UI资源
+│   ├── scenes/            # 场景资源
+│   │   ├── backgrounds/  # 背景图
+│   │   └── maps/         # 地图资源
+│   ├── effects/           # 特效资源
+│   │   ├── particles/    # 粒子特效
+│   │   └── shaders/      # Shader资源
+│   ├── audio/             # 音频资源
+│   │   ├── bgm/          # 背景音乐
+│   │   └── sfx/          # 音效
+│   └── configs/           # 配置文件
+├── src/                   # 源代码目录
+│   ├── core/             # 核心系统
+│   ├── gameplay/         # 游戏玩法
+│   ├── ui/               # UI系统
+│   └── utils/            # 工具类
+└── scenes/               # 场景文件
+    ├── MainMenu.scene    # 主菜单场景
+    ├── Level_1_1.scene   # 第1关场景
+    └── ...
+```
+
+#### 10.3.2 构建流程
+1. **资源导入**
+    - 导入所有生成的图片、音频资源
+    - 配置资源的导入设置（压缩、格式等）
+    - 创建精灵图集（Sprite Atlas）
+
+2. **场景搭建**
+    - 创建主菜单场景
+    - 创建第1关场景（寒江水域）
+    - 配置场景的层级结构和碰撞层
+
+3. **代码集成**
+    - 将生成的代码文件放入对应目录
+    - 配置脚本的依赖关系
+    - 绑定脚本到场景节点
+
+4. **配置数据**
+    - 填充配置文件的数据（根据第三章的数值设计）
+    - 配置关卡数据（根据第七章的关卡设计）
+    - 配置技能数据（根据第六章的玩法设计）
+
+#### 10.3.3 测试验证
+1. **功能测试**
+    - 测试角色移动、跳跃、攻击
+    - 测试轻功系统（踏浪、飞檐）
+    - 测试战斗系统（伤害计算、技能释放）
+    - 测试AI系统（怪物行为）
+
+2. **性能测试**
+    - 检查帧率（目标：60fps）
+    - 检查内存占用（目标：<200MB）
+    - 检查加载时间（目标：<3秒）
+
+3. **兼容性测试**
+    - 测试不同分辨率（1080×1960为主）
+    - 测试不同设备性能
+
+### 10.4 Agent协作流程
+
+#### 10.4.1 资源生成Agent
+- **输入**：第五章的视觉设计规范
+- **输出**：符合水墨风格的游戏资源（图片、音频）
+- **验证**：资源尺寸、格式、风格一致性
+
+#### 10.4.2 代码生成Agent
+- **输入**：第二章的系统功能、第三章的数值设计、第六章的玩法设计
+- **输出**：完整的游戏代码（TypeScript/JavaScript）
+- **验证**：代码语法正确、逻辑完整、符合设计规范
+
+#### 10.4.3 场景编排Agent
+- **输入**：第五章的地图设计、第七章的关卡设计
+- **输出**：完整的场景文件（.scene）
+- **验证**：场景结构正确、节点配置完整
+
+#### 10.4.4 构建执行Agent
+- **输入**：资源、代码、场景文件
+- **输出**：可运行的游戏包
+- **验证**：构建成功、无错误、可正常运行
+
+---
+
+## 附录：对话式需求采集标准格式
+
+### Step 1: 对话收集
+- 游戏名称：墨影寒江
+- 游戏类型：竖版ARPG + 动作解谜
+- 美术风格：极简水墨晕染
+- 题材：东方武侠与志怪复仇
+
+### Step 2: 信息采集
+- **基础信息**：已完整采集（见第一章）
+- **系统功能**：已完整采集（见第二章）
+- **游戏数值**：已完整采集（见第三章）
+- **角色设定**：已完整采集（见第四章）
+
+### Step 3: 生成策划案
+- 本文档即为完整策划案
+- 包含游戏开发所需的所有信息
+- 可直接用于AI生成游戏内容
+
+---
+
+**文档版本**：v1.0  
+**创建日期**：2026-02-11  
+**最后更新**：2026-02-11  
+**文档状态**：已完成
+
+---
+
+**备注**：
+- 本策划方案基于小游戏行业标准制定
+- 涵盖游戏风格、界面、地图、角色、图标、特效、标志、游戏玩法、关卡等所有维度
+- 可直接用于AI辅助游戏开发
+- 建议根据实际开发情况进行调整和优化
