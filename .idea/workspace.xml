@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39834e71-8edf-433c-ac7a-137df96d4775" name="更改" comment="Update GameValues">
-      <change afterPath="$PROJECT_DIR$/test.md" afterDir="false" />
+    <list default="true" id="39834e71-8edf-433c-ac7a-137df96d4775" name="更改" comment="Update_for_test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameValues.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GameValues.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -116,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773384462251</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update_for_test">
+      <option name="closed" value="true" />
+      <created>1773625751427</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773625751427</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update README" />
     <MESSAGE value="Update GameValues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update GameValues" />
+    <MESSAGE value="Update_for_test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update_for_test" />
   </component>
 </project>
