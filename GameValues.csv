@@ -10,16 +10,17 @@ VISUAL_EFFECTS,视觉特效,动态光影
 DYNAMIC_EXPRESSION,动态表现,粒子特效
 RESOLUTION_WIDTH,分辨率宽度,1920
 RESOLUTION_HEIGHT,分辨率高度,1080
-SCREEN_ORIENTATION,屏幕方向,竖屏
+SCREEN_ORIENTATION,屏幕方向,横屏
 CORE_THEME,游戏题材,生存
 CULTURAL_BACKGROUND,文化背景,现代
-KEYWORD_LIST,核心关键词,开放世界、僵尸
+KEYWORD_LIST,核心关键词,开放世界、生存
 INFORMATION,游戏大纲,探索一座废墟城市
 PLAYER_GOAL,玩家目标,寻找解药
-PLAYER_INTERACTION,玩家交互方式,触屏操作
+PLAYER_INTERACTION,玩家交互方式,键鼠操作
 CORE_ACTIONS,核心操作动词,跳跃、攻击、冲刺
 CORE_MECHANICS,核心玩法机制,实时战斗
 FEEDBACK_SYSTEM,反馈机制,视觉与音效反馈
+ENABLED_MODULES,已启用模块,A、B、C、D
 MODULE_A,模块A启用,是
 CHARACTER_MODE,角色模式,单角色
 CHARACTER_STATS,核心属性,生命值、攻击力、防御力
@@ -70,322 +71,35 @@ DYNAMIC_AUDIO,动态音频,是
 PROGRESS_MAX,最大进度点数,1000
 PROGRESS_FORMULA,进度公式,经验 = 等级² × 10
 HP_BASE,基础生命值,100
-HP_MULTIPLIER,生命增长系数,10
+HP_MULTIPLIER,每进度点生命增长,10
 SPECIAL_ATTR_BASE,专属属性基础值,50
-SPECIAL_ATTR_MULTIPLIER,属性成长系数,5
-PROGRESS_EXP_MULTIPLIER,经验倍率,1.5
+SPECIAL_ATTR_MULTIPLIER,专属属性进度增长系数,5
+PROGRESS_EXP_MULTIPLIER,进度经验获取倍率,1.5
 ENTITY_MIN_LEVEL,最小等级,1
 ENTITY_MAX_LEVEL,最大等级,50
-ENTITY_HP_FORMULA,生命值公式,基础生命值 × 等级
-NORMAL_ENTITY_COEF,普通实体系数,1.0
-RARE_ENTITY_COEF,稀有实体系数,1.5
-RARE_ENTITY_LEVEL_COEF,稀有等级系数,1.2
-COEFFICIENT_ATTACK,攻击系数,0.8
-COEFFICIENT_HEAL,治疗系数,1.2
-FIXED_VALUE,固定数值加成,20
-PHYSICAL_REDUCTION_RATE,物理减伤率,0.3
-MAGIC_REDUCTION_RATE,法术减伤率,0.25
+ENTITY_HP_FORMULA,实体生命值计算公式,HP = 基础值 × 等级 × 系数
+NORMAL_ENTITY_COEF,普通实体属性基础系数,1.0
+RARE_ENTITY_COEF,稀有实体属性强化系数,1.5
+RARE_ENTITY_LEVEL_COEF,稀有实体等级成长系数,1.2
+COEFFICIENT_ATTACK,攻击效果基础倍率,1.0
+COEFFICIENT_HEAL,治疗效果基础倍率,0.8
+FIXED_VALUE,固定数值加成,10
+PHYSICAL_REDUCTION_RATE,物理减伤率,0.1
+MAGIC_REDUCTION_RATE,法术减伤率,0.1
 BASE_CRIT_RATE,基础暴击率,0.05
-CRIT_MULTIPLIER,暴击倍率,2.0
-COOLDOWN_REDUCTION,冷却缩减系数,0.1
-CURRENCY_A,基础货币,金币
-CURRENCY_B,高级货币,钻石
-CURRENCY_A_RATIO,兑换比例,100:1
-COMMON_RESOURCE_PRICE,普通资源定价,基础价格 × 1.2
-RARE_RESOURCE_PRICE_FACTOR,稀有资源乘数,3
-PAID_RESOURCE_BASE,付费资源基准,5.99
-DAILY_RESOURCE_LIMIT,每日资源上限,1000
-BASE_RESOURCE_DROP,基础掉落率,0.5
-DROP_PER_LEVEL,等级掉落增幅,0.01
-FIRST_CLEAR_BONUS,首通奖励数量,200
-RARE_RESOURCE_RATE,稀有掉落率,0.1
-DAILY_DROP_MIN,每日保底次数,3
-RARE_DROP_GUARANTEE,稀有保底概率,0.05
-GUARANTEE_RESET_CYCLE,保底重置周期,24小时
-MAIN_CHAR_COUNT,主角数量,1
-BOSS_COUNT,Boss数量,5
-NPC_COUNT,NPC数量,10
-MAIN_CHARACTER_NAME,主角名称,英雄
-CHARACTER_ROLE,角色身份,最后的幸存者
-GENDER,性别,男
-AGE,年龄,28
-APPEARANCE_1,外貌特征1,面部疤痕
-APPEARANCE_2,外貌特征2,战斗装甲
-APPEARANCE_3,外貌特征3,红色头发
-APPEARANCE_4,外貌特征4,机械臂
-ART_STYLE,艺术风格,赛博朋克
-PERSONALITY_TRAITS,性格特点,勇敢、愤世嫉俗
-ABILITY_1,能力1,电磁脉冲护盾
-ABILITY_DESCRIPTION_1,能力描述,使附近敌人瘫痪
-ABILITY_2,能力2,隐身模式
-ABILITY_DESCRIPTION_2,能力描述,隐身5秒
-ABILITY_3,能力3,狂暴形态
-ABILITY_DESCRIPTION_3,能力描述,伤害翻倍
-GROWTH_PHASE_1,成长阶段1,新手
-PHASE_1_DESCRIPTION,阶段描述,学习基础技能
-GROWTH_PHASE_2,成长阶段2,进阶
-PHASE_2_DESCRIPTION,阶段描述,解锁特殊招式
-GROWTH_PHASE_3,成长阶段3,大师
-PHASE_3_DESCRIPTION,阶段描述,属性上限解锁
-BOSS_1_NAME,Boss名称,巨型炮塔
-BOSS_TRAIT_1,Boss特点,免疫火焰攻击
-COMBAT_STYLE,战斗风格,远程攻击
-BOSS_MECHANICS,Boss机制,护盾击破
-BOSS_2_NAME,Boss名称,暗影兽
-BOSS_TRAIT_2,Boss特点,瞬移能力
-NPC_1_NAME,NPC名称,商人
-NPC_ROLE,NPC身份,装备商人
-NPC_FUNCTION,NPC功能,出售升级装备
-NPC_INTERACTION,NPC交互,出售稀有物品
-NPC_2_NAME,NPC名称,向导
-CORE_VISUAL_CONCEPT,核心视觉理念,科技与自然的融合
-PRIMARY_COLOR,主色调,深蓝色
-SECONDARY_COLOR,辅助色,银灰色
-ACCENT_COLOR,点缀色,霓虹蓝
-ART_STYLE,艺术风格,赛博朋克
-VISUAL_FEATURE_1,视觉特点1,高对比光影
-VISUAL_FEATURE_1_DESC,视觉特点1描述,利用强烈明暗对比增强立体感
-VISUAL_FEATURE_2,视觉特点2,动态粒子效果
-VISUAL_FEATURE_2_DESC,视觉特点2描述,实时生成的光效与尘埃粒子
-ENVIRONMENT_TYPE,环境类型,未来都市
-STYLE_CONSISTENCY,风格统一性,保持霓虹蓝主色调贯穿所有场景
-ATMOSPHERE,氛围营造,压抑与神秘感并存
-LAYOUT_MODE,布局模式,模块化网格布局
-NAVIGATION_STRUCTURE,导航结构,层级树状结构
-INFO_DENSITY,信息密度,中等密度（核心信息优先）
-HOME_ENABLED,主界面启用,是
-HOME_LAYOUT,主界面布局,中心聚焦式布局
-HOME_STYLE,主界面风格,动态粒子背景+悬浮按钮
-FUNCTION_ENABLED,功能界面启用,是
-FUNCTION_LAYOUT,功能界面布局,分栏式布局
-FUNCTION_STYLE,功能界面风格,渐变玻璃拟态设计
-INTERACTION_ENABLED,交互界面启用,是
-INTERACTION_LAYOUT,交互界面布局,手势引导式布局
-INTERACTION_STYLE,交互界面风格,全息投影风格
-DATA_ENABLED,数据界面启用,是
-DATA_LAYOUT,数据界面布局,可视化图表+数据面板
-DATA_STYLE,数据界面风格,极简线条风格
-SETTINGS_ENABLED,设置界面启用,是
-SETTINGS_LAYOUT,设置界面布局,折叠式列表
-SETTINGS_STYLE,设置界面风格,深色背景+圆角滑块
-CUSTOM_ENABLED,其他界面启用,是
-CUSTOM_LAYOUT,其他界面布局,自适应响应式布局
-CUSTOM_STYLE,其他界面风格,动态粒子特效
-BUTTON_STYLE,按钮样式,发光圆角按钮
-INPUT_STYLE,输入框样式,浮动输入框
-LIST_STYLE,列表样式,分层卡片式列表
-MODAL_STYLE,弹窗样式,模糊背景+微光边框
-FONT_SPEC,字体规范,思源黑体/12-24px/1.5倍行距
-SPACING_SPEC,间距规范,8px倍数网格系统
-SPACE_MODULE_ENABLED,空间模块启用,是
-SPACE_COUNT,空间数量,5
-SPACE_NAME_1,空间名称1,主控大厅
-SPACE_ENV_1,空间环境1,金属墙壁+全息屏幕
-SPACE_FEATURE_1,空间特色1,可交互数据终端
-SPACE_INTERACTION_1,互动元素1,触控式能量门
-SPACE_NAME_2,空间名称2,废弃仓库
-SPACE_ENV_2,空间环境2,锈蚀金属+雨水特效
-SPACE_FEATURE_2,空间特色2,隐藏通道机关
-SPACE_INTERACTION_2,互动元素2,可破坏的集装箱
-INTERACTIVE_ELEMENTS,可交互元素,能量柱、数据终端、传送门
-OBSTACLES,障碍/限制,激光屏障、塌陷地板
-GUIDANCE_ELEMENTS,引导元素,地面发光路径+悬浮箭头
-CHARACTER_MODULE_ENABLED,角色模块启用,是
-DEFAULT_APPEARANCE,默认外观,基础战斗服
-VARIANT_1,外观变体1,轻型装甲
-VARIANT_DESC_1,变体描述1,提升移动速度但降低防御
-VARIANT_2,外观变体2,重型装甲
-VARIANT_DESC_2,变体描述2,增强防御但限制机动性
-SECONDARY_OBJECTS,次要对象,无人机、机械臂
-DECORATIVE_ELEMENTS,装饰元素,霓虹灯管、全息广告牌
-NAV_ICON_STYLE,导航图标样式,线性扁平化图标
-NAV_ICON_SIZE,导航图标尺寸,48×48px
-FUNC_ICON_STYLE,功能图标样式,渐变立体图标
-FUNC_ICON_SIZE,功能图标尺寸,32×32px
-STATUS_ICON_STYLE,状态图标样式,微光动态图标
-STATUS_ICON_SIZE,状态图标尺寸,24×24px
-OTHER_ICON_STYLE,其他图标样式,像素风格图标
-OTHER_ICON_SIZE,其他图标尺寸,自适应尺寸
-ITEM_ICON_STYLE,物品图标样式,金属质感边框
-RESOURCE_ICON_STYLE,资源图标样式,晶体发光效果
-BADGE_ICON_STYLE,徽章图标样式,浮雕镀金效果
-ICON_CONSISTENCY,图标风格统一性,保持45度光影投射
-COLOR_CODING,色彩编码规则,红色=危险/蓝色=技能/绿色=恢复
-CLICK_FEEDBACK,点击反馈,涟漪扩散特效
-TRANSITION_ANIMATION,过渡动画,粒子化场景切换
-LOADING_ANIMATION,加载动画,旋转能量环
-STATE_CHANGE_ANIMATION,状态变化动画,颜色脉冲效果
-SUCCESS_FEEDBACK,成功反馈,绿色粒子喷发
-ERROR_FEEDBACK,错误反馈,红色震动反馈
-PROGRESS_FEEDBACK,进度反馈,进度条充能光效
-VFX_MODULE_ENABLED,特效模块启用,是
-PARTICLE_EFFECTS,粒子效果,能量爆炸、数据流特效
-LIGHTING_EFFECTS,光影效果,动态阴影投射
-SCREEN_EFFECTS,屏幕效果,故障特效、镜头抖动
-LOGO_TEXT,Logo文字,未来纪元
-LOGO_GRAPHIC,Logo图形,发光六边形核心
-LOGO_COLORS,Logo色彩规范,霓虹蓝+深空黑
-LOGO_USAGE,Logo使用场景,启动画面/菜单栏/成就界面
-SIMPLIFIED_LOGO,简化版Logo,单色线条轮廓
-ICON_LOGO,图标版Logo,发光圆形缩略图
-DERIVATIVE_LOGOS,衍生标识,动态版本/黑白版本
-Core Action,核心行动,探索地图
-Feedback Type,反馈类型,视觉与音效反馈
-Progress/Consumption Content,成长/消耗内容,经验值与金币
-Triggered Next Action,触发的下一行动,解锁新区域
-Trigger Method,触发方式,点击/按住
-Effect Description,效果描述,角色移动/攻击/技能释放
-Gameplay Type Name,玩法类型名称,实时操作
-Game Genre,游戏类型,动作/射击
-Rule Name,规则名称,移动方式
-Rule Description,规则描述,方向键控制角色移动
-Custom Type,自定义玩法类型,自定义玩法
-Dimension 1,维度1,移动方式
-Dimension 2,维度2,战斗方式
-Dimension 3,维度3,核心技巧
-X,引导时长(分钟),5
-Condition,跳过机制触发条件,完成第一个关卡
-Level Type 1,关卡类型1,主线关卡
-Level Type 2,关卡类型2,挑战关卡
-Level Type N,关卡类型N,隐藏关卡
-Objective,核心目的,推进剧情
-Difficulty Level,难度,简单/普通/困难
-Reward,奖励,金币与经验
-Entry-Level Design,入门级设定,教学引导
-Standard Design,标准级设定,正常难度
-Challenge Design,挑战级设定,高难度挑战
-X%,高强度内容占比,30%
-Y%,低强度内容占比,70%
-Penalty Description,失败惩罚,损失少量金币
-Retry Method,重试方式,立即重试
-N,阶段数量,3
-Mechanic Description,新增机制描述,护盾机制
-Weakness/Counterplay/Environment Interaction Rules,核心机制,攻击弱点部位
-Source 1,资源来源1,完成任务
-Source 2,资源来源2,击败敌人
-Source 3,资源来源3,商店购买
-Current Version Cap Description,成长上限描述,等级上限100级
-Collaboration Rules & Goals,合作模式规则与目标,共同完成任务
-PVP Rules & Matchmaking System,竞争模式规则与匹配机制,5v5对战
-Reward Content,排名体系奖励内容,稀有皮肤
-Single Action Completion,单次行动完成,完成一次攻击
-Level/Quest Completion,关卡/任务完成,完成一个关卡
-Season/Cumulative Progress,赛季/累计进度,赛季结束
-Chapter Name,章节名称,第一章
-N,关卡数量,10
-Core Theme,核心主题,机械都市
-Boss Name,Boss名称,机械守卫
-Core Mechanic Introduction,核心机制介绍,环境互动
-Progressive Complexity,逐步复杂性,逐步增加敌人数量
-Final Boss,最终Boss,机械主宰
-Story Progression,剧情推进,推进主线剧情
-Skill Mastery,技能掌握,熟练掌握技能
-Unlock Condition,解锁条件,等级达到10级
-Resource Farming,资源获取,获取升级材料
-Exploration Reward,探索奖励,额外奖励
-Hidden Trigger,隐藏触发条件,找到隐藏机关
-Level Range,关卡范围,1-10
-Tutorial Focus,教学焦点,教学引导
-Low Intensity,低强度,简单关卡
-Mechanic Introduction,机制介绍,新机制教学
-Gradual Scaling,逐步提升,难度逐步增加
-Multi-Mechanic Integration,多机制整合,多机制组合
-High Intensity,高强度,高强度挑战
-Easy,简单模式,简单模式
-Health Boost,生命值提升,生命值提升20%
-Damage Reduction,伤害减免,伤害减免15%
-Normal,标准模式,标准模式
-Hard,困难模式,困难模式
-Enemy Stats ×1.5,敌人属性×1.5,敌人属性提升50%
-Time Limit,时间限制,时间限制缩短30%
-Nightmare,极限模式,极限模式
-One-Hit Kill,一击必杀,一击必杀
-Procedural Layout,程序化布局,程序化生成地图
-Exclusive Loot,独家掉落,独家装备掉落
-Cosmetic Reward,皮肤奖励,皮肤奖励
-Stage Clear,关卡通关,关卡通关
-Basic Resources,基础资源,金币和经验
-S-Rank,S级评价,S级评价
-Speedrun,速通,速通
-Character Skin,角色皮肤,角色皮肤
-Initial Clear,首次通关,首次通关
-Currency Pack,货币礼包,金币礼包
-Daily Reset,每日重置,每日重置
-Material Drop,材料掉落,稀有材料掉落
-Seed Logic,种子规则,日期+时间种子
-Enemy Density,敌人密度,1.5倍
-X,精英怪出现率,20
-Y,稀有物品保底概率,5
-NPC独白,NPC的独白内容,这个世界需要改变
-环境细节,环境中的细节,机械残骸
-Boss机制变异,Boss机制的变化,变化机制
-资源扣除,资源扣除方式,扣除50金币
-关键决策点,关键决策点位置,关卡中段
-Boss战,Boss战位置,关卡结尾
-资源节点,资源节点位置,关卡中段
-Movement Speed,移动速度,减少20%
-Visibility,可见度,减少30%
-X,昼夜循环间隔,30
-敌人强化/资源刷新,敌人强化或资源刷新,敌人强化
-目标值,通关率目标值,70
-Menu Theme,主菜单音乐风格,宁静的钢琴曲
-Narrative Atmosphere,主线场景情绪目标,神秘的叙事氛围
-Scene Music Style,场景音乐风格,环境音/管弦乐
-Tension / Excitement,战斗场景情绪目标,紧张感/兴奋感
-Urgency / Climax,Boss战情绪目标,紧迫感/高潮感
-Other Scenes,其他场景类型,任务场景
-Genre-Specific Style,其他场景音乐风格,特定游戏风格
-Mood Description,其他场景情绪目标,情绪描述
-Trigger Condition,触发条件,生命值低/战斗开始/剧情节点
-Basic Action,基础操作触发时机,点击/按住
-Tactile Feedback,基础操作听觉目标,触觉反馈
-Skill Activation,技能/特殊操作触发时机,技能激活
-Powerful / Magical Feel,技能/特殊操作听觉目标,强大/魔法感
-Damage Taken / Failure,受击/失败触发时机,受到伤害/失败
-Negative Feedback,受击/失败听觉目标,负面反馈
-Victory / Reward,成功/奖励触发时机,胜利/奖励获得
-Positive Reinforcement,成功/奖励听觉目标,正向强化
-Ambient Layers,场景氛围音,每处关键地点的环境音层
-Environmental Sound Variation,动态音效,基于玩家状态的环境音效变化
-Click SFX Style,按钮/确认音效风格,点击/确认音效风格
-Menu Transition SFX Style,界面切换音效风格,菜单过渡音效风格
-Reward Notification SFX Style,奖励获得音效风格,奖励通知音效风格
-Error SFX Style,错误/警告音效风格,错误/警告音效风格
-Main Music Loudness,主音乐响度,-14 LUFS
-SFX Loudness,音效响度,-16 LUFS
-Sample Rate,采样率,44100 / 48000 Hz
-Dynamic Mix Rule,动态混音规则,对话压低/战斗中音乐淡出
-Custom Engine,自定义引擎,自研引擎
-CPU / RAM / OS Version,最低设备要求,i5-8250U, 8GB RAM, Android 8.0+
-Target Frame Rate,目标帧率,60
-Shader/Rendering Pipeline Solution,渲染风格实现方案,通用渲染管线
-Visual Style Requirements,视觉风格需求,高清、低多边形
-Built-in/Custom Physics Solution,物理系统实现方案,引擎内置物理系统
-Collision/Gravity Rules,碰撞/重力规则,标准碰撞、重力加速度9.8
-Behavior Tree/State Machine/Pathfinding Solution,AI系统实现方案,状态机+寻路
-AI Complexity Description,AI复杂度描述,中等复杂度
-Singleplayer/P2P/Server Solution,网络架构实现方案,服务器架构
-Sync Strategy/Latency Handling,同步策略/延迟处理,差分同步、延迟补偿
-Local/Cloud Storage Solution,数据存储实现方案,本地存储+云存档
-Save System/Progress Sync,存档系统/进度同步,自动存档、进度云同步
-Input Mapping/Controller Support,输入系统实现方案,键位映射+手柄支持
-Platform-Specific Handling,平台特定处理,移动端触控、PC键盘
-Batching/Occlusion Culling/LOD Strategy,渲染优化策略,顶点批处理、遮挡剔除、LOD
-Object Pooling/Async Loading/Compression Strategy,内存优化策略,对象池、异步加载、资源压缩
-Delta Sync/Reconnection Handling,网络优化策略,差分同步、断线重连
-High/Mid/Low Tier Device Support,目标机型适配,高/中/低配机型支持
-Analytics SDK Name,数据分析SDK名称,腾讯移动分析
-Tracking Purpose,追踪目的,用户行为分析
-Ad Network SDK,广告平台SDK,百度联盟
-Monetization Strategy,商业化策略,广告+内购
-Payment Gateway,支付系统,支付宝/微信支付
-In-App Purchase Handling,应用内购买处理,标准内购流程
-Social Login SDK,社交登录SDK,微信登录
-Account Sync/Authentication,账户同步/认证,账户ID同步
-Cloud Save Provider,云存档服务提供商,腾讯云存档
-Cross-Device Progress,跨设备进度,云存档同步进度
-IDE,开发工具,Visual Studio
-DCC Tool,3D创作工具,Blender
-Main/Dev/Feature Branching,分支策略,主分支/开发分支/特性分支
-CI/CD Pipeline / Build Automation / Asset Pipeline,自动化流程,持续集成/构建自动化/资源管线
-Debug Console / Profiler / Logging System,调试工具,调试控制台/性能分析器/日志系统
+CRIT_MULTIPLIER,暴击伤害倍率,1.5
+COOLDOWN_REDUCTION,技能冷却缩减系数,0.1
+CURRENCY_A,基础货币名称,金币
+CURRENCY_B,高级货币名称,钻石
+CURRENCY_A_RATIO,基础货币兑换高级货币比例,100:1
+COMMON_RESOURCE_PRICE,普通资源定价公式,价格 = 基础价 × 数量
+RARE_RESOURCE_PRICE_FACTOR,稀有资源定价乘数,3.0
+PAID_RESOURCE_BASE,付费资源定价基准,6元/100钻石
+DAILY_RESOURCE_LIMIT,每日资源产出上限,1000金币
+BASE_RESOURCE_DROP,基础资源掉落率,0.3
+DROP_PER_LEVEL,等级递增掉落率,0.01
+FIRST_CLEAR_BONUS,首通通关奖励数量,200
+RARE_RESOURCE_RATE,稀有资源专属掉落率,0.05
+DAILY_DROP_MIN,每日资源保底次数,3
+RARE_DROP_GUARANTEE,稀有资源保底概率,0.01
+GUARANTEE_RESET_CYCLE,保底重置周期,每日0点
